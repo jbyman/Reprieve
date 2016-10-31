@@ -46,7 +46,7 @@ class Register: UIViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "doesResponderHaveNaloxone") as! DoesResponderHaveNaloxone
             vc.firstName = firstName.text!
             vc.lastName = lastName.text!
-            vc.phoneNumber = phoneNumber.text! dsd
+            vc.phoneNumber = phoneNumber.text!
                         
             self.present(vc, animated: true, completion: nil)
 
