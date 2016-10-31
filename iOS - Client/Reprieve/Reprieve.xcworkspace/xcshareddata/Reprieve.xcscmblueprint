@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2BECE9D4A29A12DC03FDE893107302FA7A30406B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "24E381C6B62E8E3BA52493D365345EE0FECC83A9" : 9223372036854775807,
+    "2BECE9D4A29A12DC03FDE893107302FA7A30406B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AE1382AC-47BC-4C49-A14F-23BFE155E1E9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "24E381C6B62E8E3BA52493D365345EE0FECC83A9" : "",
+    "2BECE9D4A29A12DC03FDE893107302FA7A30406B" : "iOS%20-%20Client\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Reprieve",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Reprieve\/Reprieve.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jbyman\/Reprieve.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24E381C6B62E8E3BA52493D365345EE0FECC83A9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jbyman\/Naloxone-Competition-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2BECE9D4A29A12DC03FDE893107302FA7A30406B"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+*.DS_Store
+ignore/
+pushcert.p12
+sql/
+*.pem
+server

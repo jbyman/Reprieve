@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0855B761DBC67F50012A66A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0855B751DBC67F50012A66A /* Register.swift */; };
+		F096336D1DBC77720097C0B9 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336C1DBC77720097C0B9 /* HTTP.swift */; };
+		F096336F1DBC85BD0097C0B9 /* RegistrationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */; };
+		F0A501F41DC1D71A00E1DBD2 /* test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F0A501F31DC1D71A00E1DBD2 /* test.gpx */; };
+		F0AD13CA1DB37325000C2C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13C91DB37325000C2C6A /* AppDelegate.swift */; };
+		F0AD13CC1DB37325000C2C6A /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13CB1DB37325000C2C6A /* Homepage.swift */; };
+		F0AD13CF1DB37325000C2C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AD13CD1DB37325000C2C6A /* Main.storyboard */; };
+		F0AD13D11DB37325000C2C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0AD13D01DB37325000C2C6A /* Assets.xcassets */; };
+		F0AD13D41DB37325000C2C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AD13D21DB37325000C2C6A /* LaunchScreen.storyboard */; };
+		F0AD13DF1DB37325000C2C6A /* ReprieveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13DE1DB37325000C2C6A /* ReprieveTests.swift */; };
+		F0AD13EA1DB37325000C2C6A /* ReprieveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13E91DB37325000C2C6A /* ReprieveUITests.swift */; };
+		F0BD314D1DC15B0F002C280C /* DoesResponderHaveNaloxone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD314C1DC15B0F002C280C /* DoesResponderHaveNaloxone.swift */; };
+		F0BD314F1DC15B54002C280C /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD314E1DC15B54002C280C /* About.swift */; };
+		F0BD31511DC15B65002C280C /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD31501DC15B65002C280C /* UpdateProfile.swift */; };
+		F0BD31531DC15B99002C280C /* IncidentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD31521DC15B99002C280C /* IncidentLocation.swift */; };
+		F0BD31551DC162A2002C280C /* AbleToRespond.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD31541DC162A2002C280C /* AbleToRespond.swift */; };
+		F0BD31571DC16923002C280C /* Unregistered.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD31561DC16923002C280C /* Unregistered.swift */; };
+		F0D80C691DC036410019CE99 /* Icon-App-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D80C681DC036410019CE99 /* Icon-App-iPhone.png */; };
+		FA9606109C07BCC57AC672E5 /* libPods-Reprieve.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA565D51406CC5D46CF31ECD /* libPods-Reprieve.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0AD13DB1DB37325000C2C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0AD13BE1DB37324000C2C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0AD13C51DB37325000C2C6A;
+			remoteInfo = Reprieve;
+		};
+		F0AD13E61DB37325000C2C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0AD13BE1DB37324000C2C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0AD13C51DB37325000C2C6A;
+			remoteInfo = Reprieve;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29E704DCAAFAF5F16F94306E /* Pods-Reprieve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reprieve.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reprieve/Pods-Reprieve.release.xcconfig"; sourceTree = "<group>"; };
+		496D80972D815C04080BA1E8 /* Pods-Reprieve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reprieve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reprieve/Pods-Reprieve.debug.xcconfig"; sourceTree = "<group>"; };
+		AA565D51406CC5D46CF31ECD /* libPods-Reprieve.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reprieve.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0750D0C1DC6FA2300130BF5 /* Reprieve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reprieve.entitlements; sourceTree = "<group>"; };
+		F0855B751DBC67F50012A66A /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Register.swift; path = ../Register.swift; sourceTree = "<group>"; };
+		F096336C1DBC77720097C0B9 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationSuccess.swift; sourceTree = "<group>"; };
+		F0A501F31DC1D71A00E1DBD2 /* test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.gpx; sourceTree = "<group>"; };
+		F0AD13C61DB37325000C2C6A /* Reprieve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reprieve.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AD13C91DB37325000C2C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0AD13CB1DB37325000C2C6A /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
+		F0AD13CE1DB37325000C2C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F0AD13D01DB37325000C2C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0AD13D31DB37325000C2C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0AD13D51DB37325000C2C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0AD13DA1DB37325000C2C6A /* ReprieveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReprieveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AD13DE1DB37325000C2C6A /* ReprieveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReprieveTests.swift; sourceTree = "<group>"; };
+		F0AD13E01DB37325000C2C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0AD13E51DB37325000C2C6A /* ReprieveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReprieveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AD13E91DB37325000C2C6A /* ReprieveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReprieveUITests.swift; sourceTree = "<group>"; };
+		F0AD13EB1DB37325000C2C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0BD314C1DC15B0F002C280C /* DoesResponderHaveNaloxone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoesResponderHaveNaloxone.swift; sourceTree = "<group>"; };
+		F0BD314E1DC15B54002C280C /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		F0BD31501DC15B65002C280C /* UpdateProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
+		F0BD31521DC15B99002C280C /* IncidentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentLocation.swift; sourceTree = "<group>"; };
+		F0BD31541DC162A2002C280C /* AbleToRespond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbleToRespond.swift; sourceTree = "<group>"; };
+		F0BD31561DC16923002C280C /* Unregistered.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unregistered.swift; sourceTree = "<group>"; };
+		F0D80C681DC036410019CE99 /* Icon-App-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-iPhone.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0AD13C31DB37325000C2C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9606109C07BCC57AC672E5 /* libPods-Reprieve.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0AD13D71DB37325000C2C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0AD13E21DB37325000C2C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D846FAE5E74574724CB563D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				496D80972D815C04080BA1E8 /* Pods-Reprieve.debug.xcconfig */,
+				29E704DCAAFAF5F16F94306E /* Pods-Reprieve.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0AD13BD1DB37324000C2C6A = {
+			isa = PBXGroup;
+			children = (
+				F0750D0C1DC6FA2300130BF5 /* Reprieve.entitlements */,
+				F0A501F31DC1D71A00E1DBD2 /* test.gpx */,
+				F0AD13C81DB37325000C2C6A /* Reprieve */,
+				F0AD13DD1DB37325000C2C6A /* ReprieveTests */,
+				F0AD13E81DB37325000C2C6A /* ReprieveUITests */,
+				F0AD13C71DB37325000C2C6A /* Products */,
+				D846FAE5E74574724CB563D1 /* Pods */,
+				F45F0C6F5D463EC38DB7D8E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F0AD13C71DB37325000C2C6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD13C61DB37325000C2C6A /* Reprieve.app */,
+				F0AD13DA1DB37325000C2C6A /* ReprieveTests.xctest */,
+				F0AD13E51DB37325000C2C6A /* ReprieveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0AD13C81DB37325000C2C6A /* Reprieve */ = {
+			isa = PBXGroup;
+			children = (
+				F0855B751DBC67F50012A66A /* Register.swift */,
+				F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */,
+				F0D80C681DC036410019CE99 /* Icon-App-iPhone.png */,
+				F096336C1DBC77720097C0B9 /* HTTP.swift */,
+				F0AD13CB1DB37325000C2C6A /* Homepage.swift */,
+				F0AD13C91DB37325000C2C6A /* AppDelegate.swift */,
+				F0AD13CD1DB37325000C2C6A /* Main.storyboard */,
+				F0BD31561DC16923002C280C /* Unregistered.swift */,
+				F0BD31541DC162A2002C280C /* AbleToRespond.swift */,
+				F0BD31521DC15B99002C280C /* IncidentLocation.swift */,
+				F0BD31501DC15B65002C280C /* UpdateProfile.swift */,
+				F0BD314E1DC15B54002C280C /* About.swift */,
+				F0BD314C1DC15B0F002C280C /* DoesResponderHaveNaloxone.swift */,
+				F0AD13D01DB37325000C2C6A /* Assets.xcassets */,
+				F0AD13D21DB37325000C2C6A /* LaunchScreen.storyboard */,
+				F0AD13D51DB37325000C2C6A /* Info.plist */,
+			);
+			path = Reprieve;
+			sourceTree = "<group>";
+		};
+		F0AD13DD1DB37325000C2C6A /* ReprieveTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD13DE1DB37325000C2C6A /* ReprieveTests.swift */,
+				F0AD13E01DB37325000C2C6A /* Info.plist */,
+			);
+			path = ReprieveTests;
+			sourceTree = "<group>";
+		};
+		F0AD13E81DB37325000C2C6A /* ReprieveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD13E91DB37325000C2C6A /* ReprieveUITests.swift */,
+				F0AD13EB1DB37325000C2C6A /* Info.plist */,
+			);
+			path = ReprieveUITests;
+			sourceTree = "<group>";
+		};
+		F45F0C6F5D463EC38DB7D8E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA565D51406CC5D46CF31ECD /* libPods-Reprieve.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0AD13C51DB37325000C2C6A /* Reprieve */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0AD13EE1DB37325000C2C6A /* Build configuration list for PBXNativeTarget "Reprieve" */;
+			buildPhases = (
+				3215E788FA232F24B3A99618 /* [CP] Check Pods Manifest.lock */,
+				F0AD13C21DB37325000C2C6A /* Sources */,
+				F0AD13C31DB37325000C2C6A /* Frameworks */,
+				F0AD13C41DB37325000C2C6A /* Resources */,
+				DE1A1CA5D7890730CD297A6D /* [CP] Embed Pods Frameworks */,
+				477FC22FE454DDE5A8C22545 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reprieve;
+			productName = Reprieve;
+			productReference = F0AD13C61DB37325000C2C6A /* Reprieve.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0AD13D91DB37325000C2C6A /* ReprieveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0AD13F11DB37325000C2C6A /* Build configuration list for PBXNativeTarget "ReprieveTests" */;
+			buildPhases = (
+				F0AD13D61DB37325000C2C6A /* Sources */,
+				F0AD13D71DB37325000C2C6A /* Frameworks */,
+				F0AD13D81DB37325000C2C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0AD13DC1DB37325000C2C6A /* PBXTargetDependency */,
+			);
+			name = ReprieveTests;
+			productName = ReprieveTests;
+			productReference = F0AD13DA1DB37325000C2C6A /* ReprieveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0AD13E41DB37325000C2C6A /* ReprieveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0AD13F41DB37325000C2C6A /* Build configuration list for PBXNativeTarget "ReprieveUITests" */;
+			buildPhases = (
+				F0AD13E11DB37325000C2C6A /* Sources */,
+				F0AD13E21DB37325000C2C6A /* Frameworks */,
+				F0AD13E31DB37325000C2C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0AD13E71DB37325000C2C6A /* PBXTargetDependency */,
+			);
+			name = ReprieveUITests;
+			productName = ReprieveUITests;
+			productReference = F0AD13E51DB37325000C2C6A /* ReprieveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0AD13BE1DB37324000C2C6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Jake Byman";
+				TargetAttributes = {
+					F0AD13C51DB37325000C2C6A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8B6QMV9CGP;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					F0AD13D91DB37325000C2C6A = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F0AD13C51DB37325000C2C6A;
+					};
+					F0AD13E41DB37325000C2C6A = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F0AD13C51DB37325000C2C6A;
+					};
+				};
+			};
+			buildConfigurationList = F0AD13C11DB37324000C2C6A /* Build configuration list for PBXProject "Reprieve" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0AD13BD1DB37324000C2C6A;
+			productRefGroup = F0AD13C71DB37325000C2C6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0AD13C51DB37325000C2C6A /* Reprieve */,
+				F0AD13D91DB37325000C2C6A /* ReprieveTests */,
+				F0AD13E41DB37325000C2C6A /* ReprieveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0AD13C41DB37325000C2C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0AD13D41DB37325000C2C6A /* LaunchScreen.storyboard in Resources */,
+				F0A501F41DC1D71A00E1DBD2 /* test.gpx in Resources */,
+				F0D80C691DC036410019CE99 /* Icon-App-iPhone.png in Resources */,
+				F0AD13D11DB37325000C2C6A /* Assets.xcassets in Resources */,
+				F0AD13CF1DB37325000C2C6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0AD13D81DB37325000C2C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0AD13E31DB37325000C2C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3215E788FA232F24B3A99618 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		477FC22FE454DDE5A8C22545 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reprieve/Pods-Reprieve-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE1A1CA5D7890730CD297A6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reprieve/Pods-Reprieve-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0AD13C21DB37325000C2C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0855B761DBC67F50012A66A /* Register.swift in Sources */,
+				F0BD314D1DC15B0F002C280C /* DoesResponderHaveNaloxone.swift in Sources */,
+				F0BD31511DC15B65002C280C /* UpdateProfile.swift in Sources */,
+				F0BD314F1DC15B54002C280C /* About.swift in Sources */,
+				F0BD31571DC16923002C280C /* Unregistered.swift in Sources */,
+				F096336D1DBC77720097C0B9 /* HTTP.swift in Sources */,
+				F0AD13CC1DB37325000C2C6A /* Homepage.swift in Sources */,
+				F096336F1DBC85BD0097C0B9 /* RegistrationSuccess.swift in Sources */,
+				F0BD31531DC15B99002C280C /* IncidentLocation.swift in Sources */,
+				F0BD31551DC162A2002C280C /* AbleToRespond.swift in Sources */,
+				F0AD13CA1DB37325000C2C6A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0AD13D61DB37325000C2C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0AD13DF1DB37325000C2C6A /* ReprieveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0AD13E11DB37325000C2C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0AD13EA1DB37325000C2C6A /* ReprieveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0AD13DC1DB37325000C2C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0AD13C51DB37325000C2C6A /* Reprieve */;
+			targetProxy = F0AD13DB1DB37325000C2C6A /* PBXContainerItemProxy */;
+		};
+		F0AD13E71DB37325000C2C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0AD13C51DB37325000C2C6A /* Reprieve */;
+			targetProxy = F0AD13E61DB37325000C2C6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0AD13CD1DB37325000C2C6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0AD13CE1DB37325000C2C6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0AD13D21DB37325000C2C6A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0AD13D31DB37325000C2C6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0AD13EC1DB37325000C2C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jake Byman (R424K2475G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0AD13ED1DB37325000C2C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jake Byman (R424K2475G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0AD13EF1DB37325000C2C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 496D80972D815C04080BA1E8 /* Pods-Reprieve.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Reprieve.entitlements;
+				DEVELOPMENT_TEAM = 8B6QMV9CGP;
+				INFOPLIST_FILE = "$(SRCROOT)/Reprieve/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.naloxone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F0AD13F01DB37325000C2C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29E704DCAAFAF5F16F94306E /* Pods-Reprieve.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Reprieve.entitlements;
+				DEVELOPMENT_TEAM = 8B6QMV9CGP;
+				INFOPLIST_FILE = "$(SRCROOT)/Reprieve/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.naloxone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F0AD13F21DB37325000C2C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReprieveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.ReprieveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reprieve.app/Reprieve";
+			};
+			name = Debug;
+		};
+		F0AD13F31DB37325000C2C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReprieveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.ReprieveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reprieve.app/Reprieve";
+			};
+			name = Release;
+		};
+		F0AD13F51DB37325000C2C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ReprieveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.ReprieveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Reprieve;
+			};
+			name = Debug;
+		};
+		F0AD13F61DB37325000C2C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ReprieveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.ReprieveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Reprieve;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0AD13C11DB37324000C2C6A /* Build configuration list for PBXProject "Reprieve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AD13EC1DB37325000C2C6A /* Debug */,
+				F0AD13ED1DB37325000C2C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0AD13EE1DB37325000C2C6A /* Build configuration list for PBXNativeTarget "Reprieve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AD13EF1DB37325000C2C6A /* Debug */,
+				F0AD13F01DB37325000C2C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0AD13F11DB37325000C2C6A /* Build configuration list for PBXNativeTarget "ReprieveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AD13F21DB37325000C2C6A /* Debug */,
+				F0AD13F31DB37325000C2C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0AD13F41DB37325000C2C6A /* Build configuration list for PBXNativeTarget "ReprieveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AD13F51DB37325000C2C6A /* Debug */,
+				F0AD13F61DB37325000C2C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0AD13BE1DB37324000C2C6A /* Project object */;
+}
