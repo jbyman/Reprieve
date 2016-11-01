@@ -11,6 +11,7 @@ import (
     "dispatch"
     "strconv"
     "io"
+    "encoding/json"
 )
 
 /*
@@ -169,6 +170,27 @@ func handleRequest(writer http.ResponseWriter, request *http.Request){
             phone_number := request.FormValue("phone_number")
 
             handler.UpdateProviderInformation(device_token, first_name, last_name, phone_number)
+
+        /*
+        * Request is to retrieve all ongoing incidents relative to a dispatcher
+        */
+        case "retrieve_incidents":
+            fmt.Println("Retrieving ongoing incidents")
+
+            dispatcher_id := request.FormValue("dispatcher_id")
+
+            result := handler.RetrieveOngoingIncidents(dispatcher_id)
+
+            json, err := json.Marshal(result)
+
+            if err != nil{
+                panic(err.Error())
+            }
+
+            string_json := string(json)
+
+            io.WriteString(writer, string_json)
+
 
         /*
         * Request is a connection test

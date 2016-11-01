@@ -3,6 +3,7 @@ package handler
 import "database/sql"
 import "time"
 import _ "github.com/go-sql-driver/mysql"
+import "strconv"
 
 var db_info = "root@/naloxone"
 
@@ -214,6 +215,55 @@ func UpdateProviderInformation(device_token string, first_name string, last_name
     }
 
     return true
+}
+
+/*
+*
+* Function to retrieve all ongoing incidents for a given dispatcher
+*
+* @param dispatcher_id - which dispatcher to retrieve for
+* @returns an array of incidents in the form of a map
+*/
+func RetrieveOngoingIncidents(dispatcher_id string) []map[string]string{
+    var result []map[string]string
+
+    db, err := sql.Open("mysql", db_info)
+
+    if err != nil{
+        panic(err.Error())
+    }
+
+    // Retrieve specific incident information
+    select_raw := "SELECT incident_id, latitude, longitude FROM incidents WHERE dispatch_id = ?"
+    rows, err := db.Query(select_raw, dispatcher_id)
+
+    if err != nil{
+        panic(err.Error())
+    }
+
+    var(
+        incident_id string
+        incident_latitude float64
+        incident_longitude float64
+    )
+    
+    for rows.Next(){
+
+        err := rows.Scan(&incident_id, &incident_latitude, &incident_longitude)
+
+        if err != nil{
+            panic(err.Error())
+        }
+
+        incident := make(map[string] string, 0)
+        incident["latitude"] = strconv.FormatFloat(incident_latitude, 'f', 10, 64)
+        incident["longitude"] = strconv.FormatFloat(incident_longitude, 'f', 10, 64)
+        incident["incident_id"] = incident_id
+
+        result = append(result, incident)
+    }
+
+    return result
 }
 
 

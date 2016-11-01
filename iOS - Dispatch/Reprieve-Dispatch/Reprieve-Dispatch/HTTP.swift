@@ -14,24 +14,21 @@ class HTTP{
     static var longitude : String = ""
     static var device_token : String = ""
     
-    static func httpRequest(requestType : NSString, parameters : NSDictionary) -> Bool {
+    static func httpRequest(requestType : NSString, parameters : NSDictionary) -> NSString {
     
-        var urlString = "http://104.131.100.28:8000?request_name=" + (requestType as String)
-//        var urlString = "http://localhost:8000?request_name=" + (requestType as String)
+//        var urlString = "http://104.131.100.28:8000?request_name=" + (requestType as String)
+        var urlString = "http://localhost:8000?request_name=" + (requestType as String)
         for (k,v) in parameters{
             urlString += "&" + ((k as! NSString) as String)
             urlString += "=" + ((v as! NSString) as String)
         }
         
-        print("now here")
         print(urlString)
         
         var request = URLRequest(url: URL(string:urlString)!)
         request.httpMethod = "GET"
         
-        print("over here")
-        
-        var err = false
+        var res : NSString = ""
         
         let task = URLSession.shared.dataTask(with: request){
             data, response, error in
@@ -39,21 +36,15 @@ class HTTP{
             if error != nil{
                 print("Error!")
                 print(error!);
-                err = true
                 return
             }
             
            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-           print(responseString!)
+           res = responseString!
         }
         
-        print("wee")
         task.resume()
         
-        if err{
-            return false
-        }
-
-        return true;
+        return res
     }
 }

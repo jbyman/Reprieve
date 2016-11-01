@@ -45,9 +45,8 @@ class AddCall: UIViewController {
                 
                 let ret = HTTP.httpRequest(requestType: "new_incident", parameters: ["incident_lat" : latitudeText, "incident_long" : longitudeText, "notes": formattedNotes as Any, "dispatcher_id" : "1"])
                 
-                if ret{
-                    print(ret)
-                }
+                print("PRINTING RESULT")
+                print(ret)
             }
         })
         
