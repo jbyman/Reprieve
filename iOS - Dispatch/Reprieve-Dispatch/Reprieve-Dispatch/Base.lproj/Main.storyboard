@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="137.6953125" y="137.48169838945827"/>
         </scene>
-        <!--View Controller-->
+        <!--Cancel Call-->
         <scene sceneID="Ctf-05-ItA">
             <objects>
-                <viewController id="fhF-dT-iP3" sceneMemberID="viewController">
+                <viewController id="fhF-dT-iP3" customClass="CancelCall" customModule="Reprieve_Dispatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TyR-re-PnC"/>
                         <viewControllerLayoutGuide type="bottom" id="zxl-ko-Ab7"/>
@@ -166,6 +166,16 @@
                                     <constraint firstAttribute="width" constant="760" id="S8t-Wf-2J3"/>
                                     <constraint firstAttribute="height" constant="981" id="cVA-AK-etS"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="prototypeCell" id="nln-ND-L65">
+                                        <rect key="frame" x="0.0" y="28" width="760" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nln-ND-L65" id="ZGg-eu-1H6">
+                                            <rect key="frame" x="0.0" y="0.0" width="760" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D3-vh-sI2">
                                 <rect key="frame" x="26" y="1328" width="34" height="30"/>
@@ -193,6 +203,9 @@
                             <constraint firstItem="zxl-ko-Ab7" firstAttribute="top" secondItem="cPv-8i-MNW" secondAttribute="bottom" constant="133" id="xBT-8x-bhv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="FVq-Wl-uDW" id="TSk-0V-IRC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMk-2d-L3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,6 +364,9 @@
                                     <constraint firstAttribute="height" constant="30" id="zL6-ec-ORy"/>
                                 </constraints>
                                 <state key="normal" title="Cancel Call"/>
+                                <connections>
+                                    <segue destination="fhF-dT-iP3" kind="show" id="pUM-rp-Pap"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuE-YF-EVX" customClass="GMSMapView">
                                 <rect key="frame" x="16" y="113" width="992" height="1149"/>

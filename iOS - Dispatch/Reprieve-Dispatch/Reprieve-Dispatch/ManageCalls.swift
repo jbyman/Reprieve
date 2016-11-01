@@ -61,6 +61,8 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
             
             let incidentsArray = self.jsonStringToNSArray(text: responseString as! String)
             
+            CancelCall.incidents = incidentsArray!
+            
             // Switch to main thread and plot incidents on map
             DispatchQueue.main.async {
                 for object in incidentsArray!{
