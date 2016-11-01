@@ -16,6 +16,9 @@ class Unregistered: UIViewController {
         super.viewDidLoad()
         
         homeBtn.layer.cornerRadius = 5
+        
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: "IS_USER_REGISTERED")
     }
 
     override func didReceiveMemoryWarning() {

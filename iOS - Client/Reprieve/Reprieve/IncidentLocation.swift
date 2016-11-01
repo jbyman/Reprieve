@@ -21,7 +21,6 @@ class IncidentLocation: UIViewController {
     var latitude : Float64 = 0.0
     var longitude : Float64 = 0.0
     var notes : String = ""
-    var incidentId : String = ""
     
     static var myLat : Float64?
     static var myLong : Float64?
@@ -58,13 +57,23 @@ class IncidentLocation: UIViewController {
     
     @IBAction func acceptDispatch(_ sender: AnyObject) {
         
-        let _ = HTTP.httpRequest(requestType: "provider_accepts", parameters: ["device_token":HTTP.device_token as Any, "incident_id":incidentId])
+        print("what up")
+        print(HTTP.device_token)
+        
+        let token = HTTP.device_token
+        var formattedToken = token.replacingOccurrences(of: " ", with: "")
+        formattedToken = formattedToken.replacingOccurrences(of: "<", with: "")
+        formattedToken = formattedToken.replacingOccurrences(of: ">", with: "")
+        
+        let _ = HTTP.httpRequest(requestType: "provider_accepts", parameters: ["device_token":formattedToken as Any])
         
         displayInMaps()
     }
     
     func displayInMaps(){
+        print("hello how are you")
         let url = NSURL(string:"http://maps.apple.com/?saddr=\(IncidentLocation.myLat!),\(IncidentLocation.myLong!)&daddr=\(latitude),\(longitude)")!
+        print(url)
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
 

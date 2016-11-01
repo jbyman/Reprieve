@@ -50,9 +50,7 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
         else{
             print("not hidden")
         }
-        
-         UIApplication.shared.applicationIconBadgeNumber = 0
-        
+                
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

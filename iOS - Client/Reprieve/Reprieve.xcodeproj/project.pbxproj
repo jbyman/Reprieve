@@ -10,7 +10,6 @@
 		F0855B761DBC67F50012A66A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0855B751DBC67F50012A66A /* Register.swift */; };
 		F096336D1DBC77720097C0B9 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336C1DBC77720097C0B9 /* HTTP.swift */; };
 		F096336F1DBC85BD0097C0B9 /* RegistrationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */; };
-		F0A501F41DC1D71A00E1DBD2 /* test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F0A501F31DC1D71A00E1DBD2 /* test.gpx */; };
 		F0AD13CA1DB37325000C2C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13C91DB37325000C2C6A /* AppDelegate.swift */; };
 		F0AD13CC1DB37325000C2C6A /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13CB1DB37325000C2C6A /* Homepage.swift */; };
 		F0AD13CF1DB37325000C2C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AD13CD1DB37325000C2C6A /* Main.storyboard */; };
@@ -53,7 +52,6 @@
 		F0855B751DBC67F50012A66A /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Register.swift; path = ../Register.swift; sourceTree = "<group>"; };
 		F096336C1DBC77720097C0B9 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationSuccess.swift; sourceTree = "<group>"; };
-		F0A501F31DC1D71A00E1DBD2 /* test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.gpx; sourceTree = "<group>"; };
 		F0AD13C61DB37325000C2C6A /* Reprieve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reprieve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AD13C91DB37325000C2C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0AD13CB1DB37325000C2C6A /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				F0750D0C1DC6FA2300130BF5 /* Reprieve.entitlements */,
-				F0A501F31DC1D71A00E1DBD2 /* test.gpx */,
 				F0AD13C81DB37325000C2C6A /* Reprieve */,
 				F0AD13DD1DB37325000C2C6A /* ReprieveTests */,
 				F0AD13E81DB37325000C2C6A /* ReprieveUITests */,
@@ -304,7 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0AD13D41DB37325000C2C6A /* LaunchScreen.storyboard in Resources */,
-				F0A501F41DC1D71A00E1DBD2 /* test.gpx in Resources */,
 				F0D80C691DC036410019CE99 /* Icon-App-iPhone.png in Resources */,
 				F0AD13D11DB37325000C2C6A /* Assets.xcassets in Resources */,
 				F0AD13CF1DB37325000C2C6A /* Main.storyboard in Resources */,

@@ -18,14 +18,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        GMSServices.provideAPIKey("AIzaSyBbw40PoF9nQWbZU2sZNPbAdpaOTFs-Pio")
+        UIApplication.shared.applicationIconBadgeNumber = 0
         
+        GMSServices.provideAPIKey("AIzaSyBbw40PoF9nQWbZU2sZNPbAdpaOTFs-Pio")
+        self.window?.makeKeyAndVisible()
         
         // Overridden when push notifications accepted
-        HTTP.device_token = "DEVICE_NOT_FOUND"
+        HTTP.device_token = "DEVICE_TOKEN_NOT_FOUND"
         
         // As soon as user opens, request to register for remote notifactions
         registerForRemoteNotification()
+        
+        // If the user has started the app from a push notification
+        if let remoteNotification = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary {
+            let details = remoteNotification["details"] as! NSDictionary
+            
+            let latitude = (details["latitude"] as! NSString).doubleValue
+            let longitude = (details["longitude"] as! NSString).doubleValue
+            let notes = (details["notes"] as! NSString)
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let incidentView = mainStoryboard.instantiateViewController(withIdentifier: "incidentLocation") as! IncidentLocation
+            
+            incidentView.latitude = latitude
+            incidentView.longitude = longitude
+            incidentView.notes = notes as String!
+            let activeVc = UIApplication.shared.keyWindow?.rootViewController
+            activeVc?.present(incidentView, animated: false, completion: nil)
+
+        }
         
         return true
     }
@@ -82,27 +103,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     // Get remote notification data....
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]){
         print("Notification received")
-        UIApplication.shared.applicationIconBadgeNumber = 0
         
         if let aps = userInfo["details"] as? NSDictionary {
             let latitude = (aps["latitude"] as! NSString).doubleValue
             let longitude = (aps["longitude"] as! NSString).doubleValue
             let notes = (aps["notes"] as! NSString)
-            let incident_id = (aps["incident_id"])
-            showIncidentLocation(latitude: latitude, longitude: longitude, notes: notes as String, incidentID : incident_id as! String)
+            showIncidentLocation(latitude: latitude, longitude: longitude, notes: notes as String)
         }
     }
+
     
-    func showIncidentLocation(latitude: Float64, longitude: Float64, notes: String, incidentID : String){
+    func showIncidentLocation(latitude: Float64, longitude: Float64, notes: String){
+        
+        self.window!.rootViewController?.dismiss(animated: false, completion: nil)
+
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let incidentView = mainStoryboard.instantiateViewController(withIdentifier: "incidentLocation") as! IncidentLocation
         
         incidentView.latitude = latitude
         incidentView.longitude = longitude
         incidentView.notes = notes
-        incidentView.incidentId = incidentID
-        
-        self.window?.rootViewController?.present(incidentView, animated: false, completion: nil)
+        self.window?.makeKeyAndVisible()
+        let activeVc = UIApplication.shared.keyWindow?.rootViewController
+        activeVc?.present(incidentView, animated: false, completion: nil)
     }
 
 }
