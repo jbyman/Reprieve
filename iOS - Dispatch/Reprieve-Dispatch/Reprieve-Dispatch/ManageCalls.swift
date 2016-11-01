@@ -59,13 +59,14 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
             
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             
-            let incidentsArray = self.jsonStringToNSArray(text: responseString as! String)
+            let incidentsArray : NSArray = self.jsonStringToNSMutableArray(text: responseString as! String)!
+            let mutableArray = NSMutableArray(array: incidentsArray)
             
-            CancelCall.incidents = incidentsArray!
+            CancelCall.incidents = mutableArray
             
             // Switch to main thread and plot incidents on map
             DispatchQueue.main.async {
-                for object in incidentsArray!{
+                for object in incidentsArray{
                     let dict = object as! NSDictionary
                     let incidentLat = Float64(dict["latitude"] as! String)
                     let incidentLong = Float64(dict["longitude"] as! String)
@@ -114,7 +115,7 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
         marker.map = mapView
     }
     
-    func jsonStringToNSArray(text: String) -> NSArray? {
+    func jsonStringToNSMutableArray(text: String) -> NSArray? {
         if let data = text.data(using: String.Encoding.utf8) {
             do {
                 return try JSONSerialization.jsonObject(with: data, options: []) as? NSArray

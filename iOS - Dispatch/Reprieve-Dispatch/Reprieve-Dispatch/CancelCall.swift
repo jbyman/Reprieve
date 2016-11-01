@@ -13,7 +13,7 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var mainTableView: UITableView!
 
-    static var incidents : NSArray = ["Sup"]
+    static var incidents : NSMutableArray = ["Sup"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let geocoder = CLGeocoder()
         
-        
+        // Reverse geocode to display the address of the incident, as opposed to lat/long
         let coordinate = CLLocation(latitude: incidentLat!, longitude: incidentLong!)
         geocoder.reverseGeocodeLocation(coordinate, completionHandler: {(placemarks, error) -> Void in
             if((error) != nil){
@@ -53,7 +53,6 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             if (placemarks?.first) != nil {
                 
-                print(placemarks)
                 let name = placemarks?.first?.name
                 let city = placemarks?.first?.locality
                 let state = placemarks?.first?.administrativeArea
@@ -65,6 +64,7 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 full += ", " + state! + ", "
                 full += postalCode! + ", "
                 full += country!
+                full += "      (Incident ID: " + (dict["incident_id"] as! String) + ")"
                 
                 cell.textLabel?.text = full
             
@@ -79,6 +79,32 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         print("Did I select stuff?")
         
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Cancel dispatch
+        if (editingStyle == .delete) {
+            
+            self.mainTableView!.beginUpdates()
+            let dict = CancelCall.incidents[indexPath.row] as! NSDictionary
+            let incident_id = dict["incident_id"]
+            
+            let ret = HTTP.httpRequest(requestType: "end_incident", parameters: ["incident_id":incident_id!])
+            if ret == ""{
+                print("Error cancelling incident")
+            }
+            
+            CancelCall.incidents.removeObject(at: indexPath.row)
+            mainTableView.deleteRows(at: [indexPath], with: .fade)
+            
+            self.mainTableView!.endUpdates()
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Cancel Dispatch"
     }
 
 }
