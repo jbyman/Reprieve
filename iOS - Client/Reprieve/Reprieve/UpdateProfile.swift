@@ -56,9 +56,18 @@ class UpdateProfile: UIViewController {
     }
     
     @IBAction func unregister(){
-        let _ = HTTP.httpRequest(requestType: "unregister", parameters: ["device_token" : HTTP.device_token])
-        
+        print("Unregistering")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "unregistered") as! Unregistered
+        print(HTTP.device_token)
+        
+        let token = HTTP.device_token
+        var formattedToken = token.replacingOccurrences(of: " ", with: "")
+        formattedToken = formattedToken.replacingOccurrences(of: "<", with: "")
+        formattedToken = formattedToken.replacingOccurrences(of: ">", with: "")
+        
+        let _ = HTTP.httpRequest(requestType: "unregister", parameters: ["device_token" : formattedToken])
+        
+        print("Presenting view control")
         self.present(vc, animated: true, completion: nil)
     }
 

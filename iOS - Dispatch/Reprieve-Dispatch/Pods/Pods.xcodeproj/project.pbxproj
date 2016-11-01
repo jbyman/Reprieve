@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B98605FEB9A457704FEAD9DD3B6EC8F /* Pods-Reprieve-Dispatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B40E4E5FD30F999918DFAEDFEAB9A51 /* Pods-Reprieve-Dispatch-dummy.m */; };
+		3F026734199970604BD2BC8A0FBF7761 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F4FF2EDFDBB6A0C4155232D3229568C /* Pods-Reprieve-Dispatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reprieve-Dispatch.debug.xcconfig"; sourceTree = "<group>"; };
+		1F107472F5E99FE4875603FA92A8C065 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Subspecs/Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		2A5B6F596835CA3ECD67C81D100C6A69 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Subspecs/Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		5BC3259D4BC33DFCA61C8B715C4B7AA9 /* libPods-Reprieve-Dispatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reprieve-Dispatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B40E4E5FD30F999918DFAEDFEAB9A51 /* Pods-Reprieve-Dispatch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Reprieve-Dispatch-dummy.m"; sourceTree = "<group>"; };
+		6BE9BB7CFCA5EE7FA22B8F5CCB388181 /* Pods-Reprieve-Dispatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reprieve-Dispatch.release.xcconfig"; sourceTree = "<group>"; };
+		70324FDF1FBB41BEA92DE76E00BD3E96 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		787F74058F9CAA99E7BCE9B61EA3AB05 /* Pods-Reprieve-Dispatch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Reprieve-Dispatch-frameworks.sh"; sourceTree = "<group>"; };
+		797E3D45041FEAF276040D08649252E6 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BA27457EFEED00524FBBA94FAC7541D7 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Subspecs/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		BB7C947EE352563B66BD86D262D2CA56 /* Pods-Reprieve-Dispatch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Reprieve-Dispatch-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DDBF47B8BD29ABC66239CAAB6918C8B5 /* Pods-Reprieve-Dispatch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Reprieve-Dispatch-acknowledgements.plist"; sourceTree = "<group>"; };
+		F87D839C41258E02A95DD914F4A3C888 /* Pods-Reprieve-Dispatch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Reprieve-Dispatch-resources.sh"; sourceTree = "<group>"; };
+		F88E2A6AB865C2A1EB845B27A14348FA /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A140C5E88404E3E2D8550CF3C6D879A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F026734199970604BD2BC8A0FBF7761 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B63D9B3EBC8ECAFD5DA8C24F1A42DF /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				475420FA59EFC8377CF994A338979247 /* Frameworks */,
+				4F6C8AC648A5703DF2BEC96A882D19E9 /* Resources */,
+			);
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		017319C7D3F4BCAA86B0BA6499E71FEB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF15BC74C0F1A3838B3B104FAC10588C /* Pods-Reprieve-Dispatch */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1D29EF3B1D2D25DCA6D2646EDB71AEBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3259D4BC33DFCA61C8B715C4B7AA9 /* libPods-Reprieve-Dispatch.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26C94CF6FBD559155351548F2127E7DB /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				B2F22323EA3B1ADB4F96376E3F709A68 /* Base */,
+				488E301C4ACDDA928635C4886F5F6158 /* Maps */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		385FA015FFB9210F372AB1078B856AAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26C94CF6FBD559155351548F2127E7DB /* GoogleMaps */,
+				00B63D9B3EBC8ECAFD5DA8C24F1A42DF /* GooglePlaces */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		475420FA59EFC8377CF994A338979247 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70324FDF1FBB41BEA92DE76E00BD3E96 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		488E301C4ACDDA928635C4886F5F6158 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				58782CE16FDBA596AACF3304E495864F /* Frameworks */,
+				FE7622152E3A21733339563168F5FF02 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		4F6C8AC648A5703DF2BEC96A882D19E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F88E2A6AB865C2A1EB845B27A14348FA /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		58782CE16FDBA596AACF3304E495864F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F107472F5E99FE4875603FA92A8C065 /* GoogleMaps.framework */,
+				2A5B6F596835CA3ECD67C81D100C6A69 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				385FA015FFB9210F372AB1078B856AAB /* Pods */,
+				1D29EF3B1D2D25DCA6D2646EDB71AEBE /* Products */,
+				017319C7D3F4BCAA86B0BA6499E71FEB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B2F22323EA3B1ADB4F96376E3F709A68 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E6E302A733AD827C8537393BC1CE6610 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6E302A733AD827C8537393BC1CE6610 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA27457EFEED00524FBBA94FAC7541D7 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE7622152E3A21733339563168F5FF02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				797E3D45041FEAF276040D08649252E6 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FF15BC74C0F1A3838B3B104FAC10588C /* Pods-Reprieve-Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C947EE352563B66BD86D262D2CA56 /* Pods-Reprieve-Dispatch-acknowledgements.markdown */,
+				DDBF47B8BD29ABC66239CAAB6918C8B5 /* Pods-Reprieve-Dispatch-acknowledgements.plist */,
+				6B40E4E5FD30F999918DFAEDFEAB9A51 /* Pods-Reprieve-Dispatch-dummy.m */,
+				787F74058F9CAA99E7BCE9B61EA3AB05 /* Pods-Reprieve-Dispatch-frameworks.sh */,
+				F87D839C41258E02A95DD914F4A3C888 /* Pods-Reprieve-Dispatch-resources.sh */,
+				0F4FF2EDFDBB6A0C4155232D3229568C /* Pods-Reprieve-Dispatch.debug.xcconfig */,
+				6BE9BB7CFCA5EE7FA22B8F5CCB388181 /* Pods-Reprieve-Dispatch.release.xcconfig */,
+			);
+			name = "Pods-Reprieve-Dispatch";
+			path = "Target Support Files/Pods-Reprieve-Dispatch";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		538EDF00199C159B064BF2CE0EEFE5B9 /* Pods-Reprieve-Dispatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5593F891FEF2918460B62158D5436C6 /* Build configuration list for PBXNativeTarget "Pods-Reprieve-Dispatch" */;
+			buildPhases = (
+				0CE8EB2BE80685B46D9062D2BFBBC87F /* Sources */,
+				8A140C5E88404E3E2D8550CF3C6D879A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Reprieve-Dispatch";
+			productName = "Pods-Reprieve-Dispatch";
+			productReference = 5BC3259D4BC33DFCA61C8B715C4B7AA9 /* libPods-Reprieve-Dispatch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1D29EF3B1D2D25DCA6D2646EDB71AEBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				538EDF00199C159B064BF2CE0EEFE5B9 /* Pods-Reprieve-Dispatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CE8EB2BE80685B46D9062D2BFBBC87F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B98605FEB9A457704FEAD9DD3B6EC8F /* Pods-Reprieve-Dispatch-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		114ACB97427BC3342A3480F5C7F857B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F4FF2EDFDBB6A0C4155232D3229568C /* Pods-Reprieve-Dispatch.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BC7F3CCBECDB2BD9CBB0EB9D1792E2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE9BB7CFCA5EE7FA22B8F5CCB388181 /* Pods-Reprieve-Dispatch.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ED4FC68AB2A4E06C718CFF338F6F156B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */,
+				ED4FC68AB2A4E06C718CFF338F6F156B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5593F891FEF2918460B62158D5436C6 /* Build configuration list for PBXNativeTarget "Pods-Reprieve-Dispatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114ACB97427BC3342A3480F5C7F857B2 /* Debug */,
+				BC7F3CCBECDB2BD9CBB0EB9D1792E2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

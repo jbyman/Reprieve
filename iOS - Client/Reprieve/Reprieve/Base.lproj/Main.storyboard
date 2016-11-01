@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reprieve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWu-my-fIN">
-                                <rect key="frame" x="114" y="28" width="146.5" height="47"/>
+                                <rect key="frame" x="114" y="28" width="147" height="47"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,14 +44,14 @@
                                     <segue destination="ksT-zV-NcH" kind="show" id="x29-pb-fuk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save a Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-Xx-KHC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Save a Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-Xx-KHC">
                                 <rect key="frame" x="147" y="71" width="81.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-App-iPhone.png" translatesAutoresizingMaskIntoConstraints="NO" id="O6t-fi-1Th">
-                                <rect key="frame" x="97.5" y="119" width="180" height="180"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Icon-App-iPhone.png" translatesAutoresizingMaskIntoConstraints="NO" id="O6t-fi-1Th">
+                                <rect key="frame" x="97" y="119" width="180" height="180"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYF-oj-veL">
                                 <rect key="frame" x="279" y="617" width="80" height="30"/>
@@ -68,7 +68,7 @@
                                     <segue destination="TuR-Ym-HfG" kind="show" id="qec-pB-bKz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aB-9x-hNt">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aB-9x-hNt">
                                 <rect key="frame" x="112" y="364" width="150" height="41"/>
                                 <color key="backgroundColor" red="1" green="0.042795975479999998" blue="0.033314899090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -82,18 +82,31 @@
                                     <segue destination="C8d-M5-mxz" kind="show" id="oAu-7q-Lmp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADv-OA-dLN">
+                                <rect key="frame" x="38" y="439" width="299" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5R2-un-pFr"/>
+                                    <constraint firstAttribute="width" constant="299" id="omh-v3-pfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aWu-my-fIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0lr-yd-NvJ"/>
                             <constraint firstItem="O6t-fi-1Th" firstAttribute="top" secondItem="OA7-Xx-KHC" secondAttribute="bottom" constant="28" id="6yb-fD-i1l"/>
+                            <constraint firstItem="ADv-OA-dLN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DFx-Y1-HT0"/>
                             <constraint firstItem="aWu-my-fIN" firstAttribute="top" secondItem="UAc-aQ-PWx" secondAttribute="bottom" constant="8" id="GSs-32-FX8"/>
                             <constraint firstItem="7aB-9x-hNt" firstAttribute="top" secondItem="O6t-fi-1Th" secondAttribute="bottom" constant="65" id="SbV-YK-8fA"/>
                             <constraint firstItem="OA7-Xx-KHC" firstAttribute="top" secondItem="UAc-aQ-PWx" secondAttribute="bottom" constant="51" id="Xks-N5-wOx"/>
                             <constraint firstItem="7aB-9x-hNt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZID-g7-dGh"/>
                             <constraint firstItem="Ode-eL-3wr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="axK-eH-Xf8"/>
                             <constraint firstItem="5ca-pQ-8AL" firstAttribute="top" secondItem="UYF-oj-veL" secondAttribute="bottom" constant="20" id="dQB-Rj-V6e"/>
+                            <constraint firstItem="ADv-OA-dLN" firstAttribute="top" secondItem="7aB-9x-hNt" secondAttribute="bottom" constant="34" id="flU-Sx-y1B"/>
                             <constraint firstItem="5ca-pQ-8AL" firstAttribute="top" secondItem="Ode-eL-3wr" secondAttribute="bottom" constant="20" id="hWV-SP-4hl"/>
+                            <constraint firstItem="UYF-oj-veL" firstAttribute="top" secondItem="ADv-OA-dLN" secondAttribute="bottom" constant="157" id="knX-it-N9k"/>
                             <constraint firstItem="OA7-Xx-KHC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="scU-G6-6od"/>
                             <constraint firstItem="UYF-oj-veL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uq6-Ax-wXL"/>
                             <constraint firstItem="O6t-fi-1Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wnH-zc-KBG"/>
@@ -101,13 +114,14 @@
                     </view>
                     <connections>
                         <outlet property="aboutBtn" destination="Ode-eL-3wr" id="6QT-Lj-aNw"/>
+                        <outlet property="greetingLabel" destination="ADv-OA-dLN" id="KqD-RQ-J4G"/>
                         <outlet property="profileBtn" destination="UYF-oj-veL" id="noi-iC-6Nl"/>
                         <outlet property="registrationBtn" destination="7aB-9x-hNt" id="j34-zF-HOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="123.59154929577466"/>
+            <point key="canvasLocation" x="133.59999999999999" y="122.78860569715144"/>
         </scene>
         <!--Update Profile-->
         <scene sceneID="t8j-h5-Wnb">
