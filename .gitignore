@@ -2,3 +2,4 @@
 *.p12
 *.pem
 iOS - Client/Reprieve/Pods/*
+iOS - Dispatch/Reprieve-Dispatch/Pods/*
