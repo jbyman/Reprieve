@@ -19,6 +19,9 @@ class Unregistered: UIViewController {
         
         let defaults = UserDefaults.standard
         defaults.set(false, forKey: "IS_USER_REGISTERED")
+        defaults.set("", forKey: "USER_FIRST_NAME")
+        defaults.set("", forKey: "USER_LAST_NAME")
+        defaults.set("", forKey: "USER_PHONE_NUMBER")
     }
 
     override func didReceiveMemoryWarning() {

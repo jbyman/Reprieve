@@ -22,6 +22,7 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         greetingLabel.isHidden = true
+        profileBtn.isHidden = true
         
         profileBtn.layer.cornerRadius = 5
         registrationBtn.layer.cornerRadius = 5
@@ -46,15 +47,17 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
         let is_registered = defaults.bool(forKey: "IS_USER_REGISTERED")
         
         if (is_registered){
-            print("YES the person is registered")
             registrationBtn.isHidden = true
             let firstName = defaults.string(forKey: "USER_FIRST_NAME")
             greetingLabel.isHidden = false
+        
             greetingLabel.text = "Hello, " + firstName!
             locationManager.startUpdatingLocation()
+            
+            profileBtn.isHidden = false
         }
         else{
-            print("not hidden")
+    
         }
                 
     }
