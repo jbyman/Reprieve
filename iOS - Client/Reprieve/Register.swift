@@ -59,5 +59,28 @@ class Register: UIViewController {
         
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        // Become first responder...get it??
+        textField.resignFirstResponder()
+        
+        
+        // becomeFirstResponder...get it?
+        if (textField == self.firstName){
+            self.lastName.becomeFirstResponder()
+        }
+        else if(textField == self.lastName){
+            self.phoneNumber.becomeFirstResponder()
+        }
+        else if(textField == self.phoneNumber){
+            // self.phoneNumber.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    @IBAction func textField(_ sender: AnyObject) {
+        self.view.endEditing(true);
+    }
+    
 
 }

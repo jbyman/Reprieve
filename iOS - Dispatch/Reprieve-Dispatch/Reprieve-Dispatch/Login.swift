@@ -25,6 +25,10 @@ class Login: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func textField(_ sender: AnyObject) {
+        self.view.endEditing(true);
+    }
 
 
 }

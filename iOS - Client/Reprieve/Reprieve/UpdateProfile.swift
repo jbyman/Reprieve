@@ -70,5 +70,9 @@ class UpdateProfile: UIViewController {
         print("Presenting view control")
         self.present(vc, animated: true, completion: nil)
     }
+    
+    @IBAction func textField(_ sender: AnyObject) {
+        self.view.endEditing(true);
+    }
 
 }
