@@ -1,7 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
 target 'Reprieve' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
-    pod 'AWSAutoScaling'
-    pod 'AWSCloudWatch'
+    pod 'APScheduledLocationManager'
 end

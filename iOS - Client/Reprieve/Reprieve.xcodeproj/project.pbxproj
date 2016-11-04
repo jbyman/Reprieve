@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B301064639A54C26ECA2A30E /* Pods_Reprieve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72C360C5AD7B23E64908B7C /* Pods_Reprieve.framework */; };
 		F0855B761DBC67F50012A66A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0855B751DBC67F50012A66A /* Register.swift */; };
 		F096336D1DBC77720097C0B9 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336C1DBC77720097C0B9 /* HTTP.swift */; };
 		F096336F1DBC85BD0097C0B9 /* RegistrationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */; };
@@ -24,7 +25,6 @@
 		F0BD31551DC162A2002C280C /* AbleToRespond.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD31541DC162A2002C280C /* AbleToRespond.swift */; };
 		F0BD31571DC16923002C280C /* Unregistered.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD31561DC16923002C280C /* Unregistered.swift */; };
 		F0D80C691DC036410019CE99 /* Icon-App-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D80C681DC036410019CE99 /* Icon-App-iPhone.png */; };
-		FA9606109C07BCC57AC672E5 /* libPods-Reprieve.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA565D51406CC5D46CF31ECD /* libPods-Reprieve.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 /* Begin PBXFileReference section */
 		29E704DCAAFAF5F16F94306E /* Pods-Reprieve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reprieve.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reprieve/Pods-Reprieve.release.xcconfig"; sourceTree = "<group>"; };
 		496D80972D815C04080BA1E8 /* Pods-Reprieve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reprieve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reprieve/Pods-Reprieve.debug.xcconfig"; sourceTree = "<group>"; };
-		AA565D51406CC5D46CF31ECD /* libPods-Reprieve.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reprieve.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72C360C5AD7B23E64908B7C /* Pods_Reprieve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reprieve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0750D0C1DC6FA2300130BF5 /* Reprieve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reprieve.entitlements; sourceTree = "<group>"; };
 		F0855B751DBC67F50012A66A /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Register.swift; path = ../Register.swift; sourceTree = "<group>"; };
 		F096336C1DBC77720097C0B9 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA9606109C07BCC57AC672E5 /* libPods-Reprieve.a in Frameworks */,
+				B301064639A54C26ECA2A30E /* Pods_Reprieve.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 		F45F0C6F5D463EC38DB7D8E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AA565D51406CC5D46CF31ECD /* libPods-Reprieve.a */,
+				E72C360C5AD7B23E64908B7C /* Pods_Reprieve.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
