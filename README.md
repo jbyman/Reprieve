@@ -1,7 +1,7 @@
 ## Reprieve - Overview
 Our entry for the _2016 FDA Naloxone App Competition_. This repository includes the three components for this iOS application: the iOS frontend for responders, the iPad dispatch application for county dispatch centers, and the Go backend, which is hosted on a Digital Ocean droplet.
 
-<img align="center" src="UI/logo.png" alt="Call" height="400px"/>
+<img src="UI/logo.png" alt="Logo" height="400px"/>
 
 ## Members
 * Jonathan Byman
@@ -12,14 +12,14 @@ Our entry for the _2016 FDA Naloxone App Competition_. This repository includes 
 This is the app that consumers would use and download from the public App Store. They would sign up and say that they are trained and carry nasal naloxone. These apps would be sent a push notification when there is a nearby suspected opioid overdose.
 
 <div style="text-align:center">
-    <img align="center" src="UI/Client/call.PNG" alt="Call" height="400px"/>
+    <img src="UI/Client/call.PNG" alt="Call" height="400px"/>
 </div>
 
 ## iOS - Dispatch
 These would be the iPad apps that are managed by county emergency dispatch centers. When they are comfortable sending in good samaritans who carry nasal naloxone, they would trigger the dispatch by locating the suspected opioid overdose area. Then the nearby carriers would be alerted. In this way, an ambulance is already en route, and the scene is screened to be safe enough for dispatchers to send civilian carriers.
 
 <div style="text-align:center">
-    <img align="center" src="UI/Dispatch/dispatch_success.png" alt="Dispatch Success" height="400px"/>
+    <img src="UI/Dispatch/dispatch_success.png" alt="Dispatch Success" height="400px"/>
 </div>
 
 
