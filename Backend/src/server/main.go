@@ -82,6 +82,8 @@ func handleRequest(writer http.ResponseWriter, request *http.Request){
             new_incident := strconv.Itoa(handler.NewIncident(dispatcher, longitude, latitude, notes))
             dispatch.Dispatch(new_incident)
 
+            io.WriteString(writer, new_incident)
+
         /*
         * Request is a new provider
         */

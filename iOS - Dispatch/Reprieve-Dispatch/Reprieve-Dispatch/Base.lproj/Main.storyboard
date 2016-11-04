@@ -197,7 +197,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calls will automatically be cancelled 15 minutes after dispatching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPv-8i-MNW">
-                                <rect key="frame" x="449" y="1212" width="495" height="21"/>
+                                <rect key="frame" x="264.5" y="1212" width="495" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="V50-ou-i34"/>
                                     <constraint firstAttribute="width" constant="495" id="rgt-7H-syN"/>

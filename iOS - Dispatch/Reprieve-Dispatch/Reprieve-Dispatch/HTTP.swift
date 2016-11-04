@@ -13,11 +13,13 @@ class HTTP{
     static var latitude : String = ""
     static var longitude : String = ""
     static var device_token : String = ""
+    static var SERVER_URI : String = "http://localhost:8000?request_name="
+//    static var SERVER_URI : String = "http://104.131.100.28:8000?request_name="
     
     static func httpRequest(requestType : NSString, parameters : NSDictionary) -> NSString {
     
-//        var urlString = "http://104.131.100.28:8000?request_name=" + (requestType as String)
-        var urlString = "http://localhost:8000?request_name=" + (requestType as String)
+//        var urlString = SERVER_URI + (requestType as String)
+        var urlString = SERVER_URI + (requestType as String)
         for (k,v) in parameters{
             urlString += "&" + ((k as! NSString) as String)
             urlString += "=" + ((v as! NSString) as String)

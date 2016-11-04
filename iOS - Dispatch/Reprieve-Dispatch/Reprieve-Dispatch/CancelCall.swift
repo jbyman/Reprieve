@@ -71,13 +71,24 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         })
         
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("Did I select stuff?")
+        // let cell = mainTableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath)
+        let incident = CancelCall.incidents[indexPath.row] as! NSDictionary
+        let latitude = incident["latitude"]
+        let longitude = incident["longitude"]
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "main") as! ManageCalls
+        vc.latitude = (latitude as! NSString).doubleValue
+        vc.longitude = (longitude as! NSString).doubleValue
+        vc.specificIncident = true
+        
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        appDelegate.window?.rootViewController = vc
         
     }
     

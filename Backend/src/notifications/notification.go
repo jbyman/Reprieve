@@ -33,7 +33,7 @@ func SendNotification(deviceToken string, details map[string]string, development
     notification.DeviceToken = deviceToken
 
     payload := payload.NewPayload()
-    payload.Alert("Suspected Opioid Overdose").Badge(1).Custom("details", details)
+    payload.Alert("Suspected Opioid Overdose").Badge(1).Custom("details", details).Sound("alarm.caf")
     notification.Payload = payload
     notification.Topic = "com.asynchronous.naloxone"
 

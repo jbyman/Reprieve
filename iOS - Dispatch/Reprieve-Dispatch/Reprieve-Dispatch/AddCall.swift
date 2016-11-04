@@ -17,6 +17,10 @@ class AddCall: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.set("1", forKey: "DISPATCHER_ID")
 
         // Do any additional setup after loading the view.
     }
@@ -43,10 +47,52 @@ class AddCall: UIViewController {
                 let notes = self.notesField.text
                 let formattedNotes = notes?.replacingOccurrences(of: " ", with: "%20")
                 
-                let ret = HTTP.httpRequest(requestType: "new_incident", parameters: ["incident_lat" : latitudeText, "incident_long" : longitudeText, "notes": formattedNotes as Any, "dispatcher_id" : "1"])
+                let defaults = UserDefaults.standard
+                let dispatcherID = defaults.string(forKey: "DISPATCHER_ID")! as String
+            
+                var urlString = HTTP.SERVER_URI
+                urlString += "&incident_lat=" + latitudeText
+                urlString += "&incident_long=" + longitudeText
+                urlString += ("&notes=" + formattedNotes!)
+                urlString += ("&dispatcher_id=" + dispatcherID)
                 
-                print("PRINTING RESULT")
-                print(ret)
+                var request = URLRequest(url: URL(string: urlString)!)
+                request.httpMethod = "GET"
+                
+                let task = URLSession.shared.dataTask(with: request){
+                    data, response, error in
+                    
+                    if error != nil{
+                        print("Error!")
+                        print(error!);
+                        return
+                    }
+                    
+                    let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                    
+                    // Dispatch after 15 minutes (60 seconds * 15)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 60*15) {
+                        HTTP.httpRequest(requestType: "end_incident", parameters: ["incident_id": responseString!])
+                    }
+                    
+                    DispatchQueue.main.async {
+                        if responseString != "-1"{
+                            let alertController = UIAlertController(title: "Dispatched", message: "The suspected opioid overdose has been dispatched", preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                        else{
+                            let alertController = UIAlertController(title: "Error", message: "Something went wrong with dispatching", preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                    }
+                }
+                
+                task.resume()
+
+                
+                
             }
         })
         

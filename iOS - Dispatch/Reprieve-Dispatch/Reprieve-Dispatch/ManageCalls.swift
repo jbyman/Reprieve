@@ -13,17 +13,21 @@ import CoreLocation
 class ManageCalls: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: GMSMapView!
-    
     @IBOutlet weak var addCallBtn: UIButton!
     @IBOutlet weak var cancelCallBtn: UIButton!
     
     var latitude : Float64 = 0.0
     var longitude : Float64 = 0.0
+    var specificIncident : Bool = false
     
     let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        let defaults = UserDefaults.standard
+        
+        defaults.set("1", forKey: "DISPATCHER_ID")
         
         locationManager.requestAlwaysAuthorization()
         
@@ -45,7 +49,7 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
         marker.position = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
         marker.map = mapView
         
-        var request = URLRequest(url: URL(string:"http://localhost:8000?request_name=retrieve_incidents&dispatcher_id=1")!)
+        var request = URLRequest(url: URL(string: HTTP.SERVER_URI + "retrieve_incidents&dispatcher_id=1")!)
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request){
@@ -86,18 +90,20 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         print("Location changed")
-        let locValue: CLLocationCoordinate2D = locationManager.location!.coordinate
         
-        let lat = locValue.latitude
-        let long = locValue.longitude
-        self.latitude = lat
-        self.longitude = long
+        if(!specificIncident){
+            let locValue: CLLocationCoordinate2D = locationManager.location!.coordinate
         
-        let update : GMSCameraUpdate = GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(lat, long))
-//        let update : GMSCameraUpdate = GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(42.4404090, -76.4866130))
+            let lat = locValue.latitude
+            let long = locValue.longitude
+            self.latitude = lat
+            self.longitude = long
+            
+            let update : GMSCameraUpdate = GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(lat, long))
         
-        mapView.animate(with: update)
-        
+            mapView.animate(with: update)
+            
+        }
         manager.stopUpdatingLocation()
         
     }
