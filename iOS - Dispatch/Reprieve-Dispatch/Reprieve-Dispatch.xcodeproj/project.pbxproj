@@ -12,7 +12,6 @@
 		F00E5B801DC8835400B433CA /* AddCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E5B7F1DC8835400B433CA /* AddCall.swift */; };
 		F00E5B821DC8836000B433CA /* CancelCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E5B811DC8836000B433CA /* CancelCall.swift */; };
 		F01CD52D1DC8781D00E49914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01CD52C1DC8781D00E49914 /* AppDelegate.swift */; };
-		F01CD52F1DC8781D00E49914 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01CD52E1DC8781D00E49914 /* Login.swift */; };
 		F01CD5321DC8781D00E49914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01CD5301DC8781D00E49914 /* Main.storyboard */; };
 		F01CD5341DC8781D00E49914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01CD5331DC8781D00E49914 /* Assets.xcassets */; };
 		F01CD5371DC8781D00E49914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01CD5351DC8781D00E49914 /* LaunchScreen.storyboard */; };
@@ -48,7 +47,6 @@
 		F00E5B811DC8836000B433CA /* CancelCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelCall.swift; sourceTree = "<group>"; };
 		F01CD5291DC8781D00E49914 /* Reprieve-Dispatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reprieve-Dispatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01CD52C1DC8781D00E49914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F01CD52E1DC8781D00E49914 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F01CD5311DC8781D00E49914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F01CD5331DC8781D00E49914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F01CD5361DC8781D00E49914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				F01CD55A1DC879A500E49914 /* Icon-App-iPad-Pro.png */,
 				F0D351E01DC8839500ADBA2D /* HTTP.swift */,
 				F01CD52C1DC8781D00E49914 /* AppDelegate.swift */,
-				F01CD52E1DC8781D00E49914 /* Login.swift */,
 				F00E5B7D1DC8834600B433CA /* ManageCalls.swift */,
 				F00E5B7F1DC8835400B433CA /* AddCall.swift */,
 				F00E5B811DC8836000B433CA /* CancelCall.swift */,
@@ -357,7 +354,6 @@
 				F00E5B7E1DC8834600B433CA /* ManageCalls.swift in Sources */,
 				F00E5B801DC8835400B433CA /* AddCall.swift in Sources */,
 				F0D351E11DC8839500ADBA2D /* HTTP.swift in Sources */,
-				F01CD52F1DC8781D00E49914 /* Login.swift in Sources */,
 				F01CD52D1DC8781D00E49914 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

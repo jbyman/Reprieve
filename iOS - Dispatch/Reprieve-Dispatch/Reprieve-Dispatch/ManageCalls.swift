@@ -26,7 +26,8 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
                 
         let defaults = UserDefaults.standard
-        
+
+        // Dispatcher ID is set to 1 for now!
         defaults.set("1", forKey: "DISPATCHER_ID")
         
         locationManager.requestAlwaysAuthorization()
@@ -38,6 +39,12 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
             locationManager.distanceFilter = 3
             locationManager.startUpdatingLocation()
         }
+
+        let lat = 42.439631
+        let long = -76.485176
+        
+        self.latitude = lat
+        self.longitude = long
         
         let camera = GMSCameraPosition.camera(withLatitude: self.latitude, longitude: self.longitude, zoom: 18.0)
         
@@ -63,21 +70,22 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
             
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             
-            let incidentsArray : NSArray = self.jsonStringToNSMutableArray(text: responseString as! String)!
-            let mutableArray = NSMutableArray(array: incidentsArray)
-            
-            CancelCall.incidents = mutableArray
-            
-            // Switch to main thread and plot incidents on map
-            DispatchQueue.main.async {
-                for object in incidentsArray{
-                    let dict = object as! NSDictionary
-                    let incidentLat = Float64(dict["latitude"] as! String)
-                    let incidentLong = Float64(dict["longitude"] as! String)
-                    self.dropPin(pinLat: incidentLat!, pinLong: incidentLong!)
+            if responseString != "null"{
+                let incidentsArray : NSArray = self.jsonStringToNSMutableArray(text: responseString as! String)!
+                let mutableArray = NSMutableArray(array: incidentsArray)
+                
+                CancelCall.incidents = mutableArray
+                
+                // Switch to main thread and plot incidents on map
+                DispatchQueue.main.async {
+                    for object in incidentsArray{
+                        let dict = object as! NSDictionary
+                        let incidentLat = Float64(dict["latitude"] as! String)
+                        let incidentLong = Float64(dict["longitude"] as! String)
+                        self.dropPin(pinLat: incidentLat!, pinLong: incidentLong!)
+                    }
                 }
             }
-            
         }
         
         task.resume()
@@ -94,8 +102,10 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
         if(!specificIncident){
             let locValue: CLLocationCoordinate2D = locationManager.location!.coordinate
         
-            let lat = locValue.latitude
-            let long = locValue.longitude
+            let lat = 42.439631
+            let long = -76.485176
+//            let lat = locValue.latitude
+//            let long = locValue.longitude
             self.latitude = lat
             self.longitude = long
             

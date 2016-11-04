@@ -51,11 +51,13 @@ class AddCall: UIViewController {
                 let dispatcherID = defaults.string(forKey: "DISPATCHER_ID")! as String
             
                 var urlString = HTTP.SERVER_URI
+                urlString += "new_incident"
                 urlString += "&incident_lat=" + latitudeText
                 urlString += "&incident_long=" + longitudeText
                 urlString += ("&notes=" + formattedNotes!)
                 urlString += ("&dispatcher_id=" + dispatcherID)
                 
+                print(urlString)
                 var request = URLRequest(url: URL(string: urlString)!)
                 request.httpMethod = "GET"
                 
@@ -88,6 +90,7 @@ class AddCall: UIViewController {
                         }
                     }
                 }
+                print("hello")
                 
                 task.resume()
 

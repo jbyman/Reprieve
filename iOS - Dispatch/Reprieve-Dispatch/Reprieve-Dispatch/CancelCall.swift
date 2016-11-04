@@ -13,7 +13,7 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var mainTableView: UITableView!
 
-    static var incidents : NSMutableArray = ["Sup"]
+    static var incidents : NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,48 +28,44 @@ class CancelCall: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Num things")
         return CancelCall.incidents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("Cells for row stuff")
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath)
-        
-        
-        
-        
-        let dict = CancelCall.incidents[indexPath.row] as! NSDictionary
-        let incidentLat = Float64(dict["latitude"] as! String)
-        let incidentLong = Float64(dict["longitude"] as! String)
-        
-        let geocoder = CLGeocoder()
-        
-        // Reverse geocode to display the address of the incident, as opposed to lat/long
-        let coordinate = CLLocation(latitude: incidentLat!, longitude: incidentLong!)
-        geocoder.reverseGeocodeLocation(coordinate, completionHandler: {(placemarks, error) -> Void in
-            if((error) != nil){
-                print("Error", error!)
-            }
-            if (placemarks?.first) != nil {
-                
-                let name = placemarks?.first?.name
-                let city = placemarks?.first?.locality
-                let state = placemarks?.first?.administrativeArea
-                let postalCode = placemarks?.first?.postalCode
-                let country = placemarks?.first?.country
-                
-                var full = ""
-                full += name! + ", " + city!
-                full += ", " + state! + ", "
-                full += postalCode! + ", "
-                full += country!
-                full += "      (Incident ID: " + (dict["incident_id"] as! String) + ")"
-                
-                cell.textLabel?.text = full
+        if CancelCall.incidents.count != 0{
+            let dict = CancelCall.incidents[indexPath.row] as! NSDictionary
+            let incidentLat = Float64(dict["latitude"] as! String)
+            let incidentLong = Float64(dict["longitude"] as! String)
             
-            }
-        })
+            let geocoder = CLGeocoder()
+            
+            // Reverse geocode to display the address of the incident, as opposed to lat/long
+            let coordinate = CLLocation(latitude: incidentLat!, longitude: incidentLong!)
+            geocoder.reverseGeocodeLocation(coordinate, completionHandler: {(placemarks, error) -> Void in
+                if((error) != nil){
+                    print("Error", error!)
+                }
+                if (placemarks?.first) != nil {
+                    
+                    let name = placemarks?.first?.name
+                    let city = placemarks?.first?.locality
+                    let state = placemarks?.first?.administrativeArea
+                    let postalCode = placemarks?.first?.postalCode
+                    let country = placemarks?.first?.country
+                    
+                    var full = ""
+                    full += name! + ", " + city!
+                    full += ", " + state! + ", "
+                    full += postalCode! + ", "
+                    full += country!
+                    full += "      (Incident ID: " + (dict["incident_id"] as! String) + ")"
+                    
+                    cell.textLabel?.text = full
+                    
+                }
+            })
+        }
         
         return cell
     }
