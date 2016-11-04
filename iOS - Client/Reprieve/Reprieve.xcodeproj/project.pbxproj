@@ -11,6 +11,10 @@
 		F0855B761DBC67F50012A66A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0855B751DBC67F50012A66A /* Register.swift */; };
 		F096336D1DBC77720097C0B9 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336C1DBC77720097C0B9 /* HTTP.swift */; };
 		F096336F1DBC85BD0097C0B9 /* RegistrationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */; };
+		F0A910F71DCC4BED00B4EC15 /* Reprieve Graphic-04.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A910F61DCC4BED00B4EC15 /* Reprieve Graphic-04.png */; };
+		F0A910F91DCC4BF500B4EC15 /* Reprieve Graphic-05.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A910F81DCC4BF500B4EC15 /* Reprieve Graphic-05.png */; };
+		F0A910FB1DCC4C1000B4EC15 /* Page 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A910FA1DCC4C1000B4EC15 /* Page 1.png */; };
+		F0A910FD1DCC4C5100B4EC15 /* Reprieve Graphic-03.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A910FC1DCC4C5100B4EC15 /* Reprieve Graphic-03.png */; };
 		F0AD13CA1DB37325000C2C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13C91DB37325000C2C6A /* AppDelegate.swift */; };
 		F0AD13CC1DB37325000C2C6A /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD13CB1DB37325000C2C6A /* Homepage.swift */; };
 		F0AD13CF1DB37325000C2C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AD13CD1DB37325000C2C6A /* Main.storyboard */; };
@@ -52,6 +56,10 @@
 		F0855B751DBC67F50012A66A /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Register.swift; path = ../Register.swift; sourceTree = "<group>"; };
 		F096336C1DBC77720097C0B9 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationSuccess.swift; sourceTree = "<group>"; };
+		F0A910F61DCC4BED00B4EC15 /* Reprieve Graphic-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reprieve Graphic-04.png"; sourceTree = "<group>"; };
+		F0A910F81DCC4BF500B4EC15 /* Reprieve Graphic-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reprieve Graphic-05.png"; sourceTree = "<group>"; };
+		F0A910FA1DCC4C1000B4EC15 /* Page 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page 1.png"; sourceTree = "<group>"; };
+		F0A910FC1DCC4C5100B4EC15 /* Reprieve Graphic-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reprieve Graphic-03.png"; sourceTree = "<group>"; };
 		F0AD13C61DB37325000C2C6A /* Reprieve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reprieve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AD13C91DB37325000C2C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0AD13CB1DB37325000C2C6A /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
@@ -135,9 +143,13 @@
 		F0AD13C81DB37325000C2C6A /* Reprieve */ = {
 			isa = PBXGroup;
 			children = (
+				F0A910FA1DCC4C1000B4EC15 /* Page 1.png */,
+				F0A910FC1DCC4C5100B4EC15 /* Reprieve Graphic-03.png */,
+				F0A910F61DCC4BED00B4EC15 /* Reprieve Graphic-04.png */,
+				F0D80C681DC036410019CE99 /* Icon-App-iPhone.png */,
+				F0A910F81DCC4BF500B4EC15 /* Reprieve Graphic-05.png */,
 				F0855B751DBC67F50012A66A /* Register.swift */,
 				F096336E1DBC85BD0097C0B9 /* RegistrationSuccess.swift */,
-				F0D80C681DC036410019CE99 /* Icon-App-iPhone.png */,
 				F096336C1DBC77720097C0B9 /* HTTP.swift */,
 				F0AD13CB1DB37325000C2C6A /* Homepage.swift */,
 				F0AD13C91DB37325000C2C6A /* AppDelegate.swift */,
@@ -300,10 +312,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A910F91DCC4BF500B4EC15 /* Reprieve Graphic-05.png in Resources */,
 				F0AD13D41DB37325000C2C6A /* LaunchScreen.storyboard in Resources */,
+				F0A910FD1DCC4C5100B4EC15 /* Reprieve Graphic-03.png in Resources */,
 				F0D80C691DC036410019CE99 /* Icon-App-iPhone.png in Resources */,
 				F0AD13D11DB37325000C2C6A /* Assets.xcassets in Resources */,
+				F0A910F71DCC4BED00B4EC15 /* Reprieve Graphic-04.png in Resources */,
 				F0AD13CF1DB37325000C2C6A /* Main.storyboard in Resources */,
+				F0A910FB1DCC4C1000B4EC15 /* Page 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +566,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.naloxone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -565,6 +582,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.asynchronous.naloxone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
