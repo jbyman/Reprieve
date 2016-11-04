@@ -1,7 +1,7 @@
 ## Reprieve - Overview
 Our entry for the _2016 FDA Naloxone App Competition_. This repository includes the three components for this iOS application: the iOS frontend for responders, the iPad dispatch application for county dispatch centers, and the Go backend, which is hosted on a Digital Ocean droplet.
 
-<img align="center" src="UI/Client/logo.png" alt="Call" height="400px"/>
+<img align="center" src="UI/logo.png" alt="Call" height="400px"/>
 
 ## Members
 * Jonathan Byman
