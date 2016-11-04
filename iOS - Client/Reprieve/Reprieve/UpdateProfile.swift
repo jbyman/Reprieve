@@ -46,10 +46,14 @@ class UpdateProfile: UIViewController {
     @IBAction func update_users(){
         
         let defaults = UserDefaults.standard
-        let provider_id = defaults.integer(forKey: "USER_DEVICE_TOKEN")
+        let provider_id = String(defaults.integer(forKey: "USER_DEVICE_TOKEN"))
         
         let response = HTTP.httpRequest(requestType: "update_provider_information", parameters: ["first_name":firstName.text! as Any, "last_name":lastName.text! as Any, "phone_number":phoneNumber.text! as Any, "provider_id" : provider_id])
         print(response)
+        
+        defaults.set(firstName.text, forKey: "USER_FIRST_NAME")
+        defaults.set(lastName.text, forKey: "USER_LAST_NAME")
+        defaults.set(phoneNumber.text, forKey: "USER_PHONE_NUMBER")
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "homepage") as! Homepage
         self.present(vc, animated: true, completion: nil)
