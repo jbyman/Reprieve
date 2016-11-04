@@ -14,7 +14,7 @@ This is the app that consumers would use and download from the public App Store.
 ## iOS - Dispatch
 These would be the iPad apps that are managed by county emergency dispatch centers. When they are comfortable sending in good samaritans who carry nasal naloxone, they would trigger the dispatch by locating the suspected opioid overdose area. Then the nearby carriers would be alerted. In this way, an ambulance is already en route, and the scene is screened to be safe enough for dispatchers to send civilian carriers.
 
-<img src="UI/Dispatch/dispatch_success.PNG" alt="Dispatch Success" height="400px"/>
+<img src="UI/Dispatch/dispatch_success.png" alt="Dispatch Success" height="400px"/>
 
 
 ## Backend
