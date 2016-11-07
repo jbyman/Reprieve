@@ -55,10 +55,10 @@
                                 <rect key="frame" x="128" y="599" width="156.33333333333331" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.042795975479999998" blue="0.033314899090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="UQk-ti-hw1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156.33333333333331" id="UQk-ti-hw1"/>
                                     <constraint firstAttribute="height" constant="50" id="b5l-Ok-abT"/>
                                     <constraint firstAttribute="width" secondItem="7aB-9x-hNt" secondAttribute="height" multiplier="119:38" id="uQ0-le-eVh"/>
-                                    <constraint firstAttribute="width" constant="150" id="wgu-kV-U45"/>
+                                    <constraint firstAttribute="width" constant="156.33333333333331" id="wgu-kV-U45"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="Registration">
@@ -70,23 +70,24 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reprieve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWu-my-fIN">
                                 <rect key="frame" x="133" y="59" width="154" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="Ac3-u5-dTP"/>
+                                    <constraint firstAttribute="height" constant="46" id="Ns5-o4-okv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save a Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-Xx-KHC">
-                                <rect key="frame" x="167" y="104" width="83" height="20"/>
+                                <rect key="frame" x="167" y="104" width="83" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WnH-2Q-Uus"/>
+                                    <constraint firstAttribute="width" constant="83" id="sz6-WJ-JkZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-App-iPhone.png" translatesAutoresizingMaskIntoConstraints="NO" id="O6t-fi-1Th">
-                                <rect key="frame" x="133" y="165" width="148" height="151"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="151" id="qgq-8X-Zig"/>
-                                    <constraint firstAttribute="width" constant="148" id="tMN-Ra-hDK"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADv-OA-dLN">
                                 <rect key="frame" x="42" y="525" width="328.66666666666669" height="21"/>
                                 <constraints>
@@ -96,6 +97,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-App-iPhone.png" translatesAutoresizingMaskIntoConstraints="NO" id="O6t-fi-1Th">
+                                <rect key="frame" x="97" y="194" width="218" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O6t-fi-1Th" secondAttribute="height" multiplier="148:151" constant="-1.5496688741721982" id="l7s-es-fkF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -103,6 +110,7 @@
                                 <variation key="widthClass=compact" constant="190"/>
                             </constraint>
                             <constraint firstItem="ADv-OA-dLN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="5mh-r4-fAP"/>
+                            <constraint firstItem="O6t-fi-1Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="8sV-g1-DAG"/>
                             <constraint firstItem="OA7-Xx-KHC" firstAttribute="top" secondItem="UAc-aQ-PWx" secondAttribute="bottom" constant="10" id="AJf-ke-Ljt">
                                 <variation key="widthClass=compact" constant="44"/>
                             </constraint>
@@ -110,37 +118,26 @@
                             <constraint firstItem="aWu-my-fIN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="59" id="Fl0-qw-Rth"/>
                             <constraint firstItem="UYF-oj-veL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GnU-4U-Ee0"/>
                             <constraint firstItem="7aB-9x-hNt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ISa-F7-hd7"/>
-                            <constraint firstItem="O6t-fi-1Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="U92-b5-qva">
-                                <variation key="widthClass=compact" constant="2"/>
-                            </constraint>
+                            <constraint firstItem="O6t-fi-1Th" firstAttribute="top" secondItem="OA7-Xx-KHC" secondAttribute="bottom" constant="40" id="NE9-NS-4p8"/>
                             <constraint firstItem="5ca-pQ-8AL" firstAttribute="top" secondItem="Ode-eL-3wr" secondAttribute="bottom" constant="20" id="VXP-r7-Kbu"/>
                             <constraint firstItem="7aB-9x-hNt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="WPM-6p-YIg"/>
                             <constraint firstItem="OA7-Xx-KHC" firstAttribute="top" secondItem="aWu-my-fIN" secondAttribute="bottom" constant="-1" id="XD7-CD-wUP"/>
                             <constraint firstItem="OA7-Xx-KHC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1.5" id="Yf3-GX-ncI"/>
-                            <constraint firstItem="O6t-fi-1Th" firstAttribute="top" secondItem="OA7-Xx-KHC" secondAttribute="bottom" constant="33" id="a00-L4-Zu2">
-                                <variation key="widthClass=compact" constant="8"/>
-                            </constraint>
                             <constraint firstItem="ADv-OA-dLN" firstAttribute="top" secondItem="7aB-9x-hNt" secondAttribute="bottom" constant="122" id="aGs-TG-Sr2">
                                 <variation key="widthClass=compact" constant="-124"/>
                             </constraint>
                             <constraint firstItem="Ode-eL-3wr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aHs-Oj-4x3"/>
                             <constraint firstItem="5ca-pQ-8AL" firstAttribute="top" secondItem="UYF-oj-veL" secondAttribute="bottom" constant="20" id="cvU-DU-dpa"/>
+                            <constraint firstItem="ADv-OA-dLN" firstAttribute="top" secondItem="O6t-fi-1Th" secondAttribute="bottom" constant="107" id="oi1-Zu-boI"/>
                             <constraint firstItem="Ode-eL-3wr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pdy-bk-MFu"/>
-                            <constraint firstItem="O6t-fi-1Th" firstAttribute="top" secondItem="OA7-Xx-KHC" secondAttribute="bottom" constant="33" id="qca-nh-37u"/>
                             <constraint firstItem="5ca-pQ-8AL" firstAttribute="top" secondItem="Ode-eL-3wr" secondAttribute="bottom" constant="20" id="qzl-nk-CTJ"/>
                             <constraint firstItem="ADv-OA-dLN" firstAttribute="centerX" secondItem="7aB-9x-hNt" secondAttribute="centerX" id="tsM-uI-Cqr"/>
-                            <constraint firstItem="7aB-9x-hNt" firstAttribute="top" secondItem="O6t-fi-1Th" secondAttribute="bottom" constant="33" id="zex-6o-MEg">
-                                <variation key="widthClass=compact" constant="283"/>
-                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
-                            </constraint>
-                            <constraint firstItem="O6t-fi-1Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zyu-CY-zBf"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Fl0-qw-Rth"/>
                                 <exclude reference="AJf-ke-Ljt"/>
                                 <exclude reference="XD7-CD-wUP"/>
-                                <exclude reference="qca-nh-37u"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -148,8 +145,6 @@
                                 <include reference="Fl0-qw-Rth"/>
                                 <exclude reference="AJf-ke-Ljt"/>
                                 <include reference="XD7-CD-wUP"/>
-                                <exclude reference="a00-L4-Zu2"/>
-                                <exclude reference="qca-nh-37u"/>
                             </mask>
                         </variation>
                     </view>
@@ -162,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127.2" y="81.409295352323838"/>
+            <point key="canvasLocation" x="126.08695652173914" y="80.706521739130437"/>
         </scene>
         <!--Update Profile-->
         <scene sceneID="t8j-h5-Wnb">
@@ -614,7 +609,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBs-xa-1qN">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="241" width="414" height="65"/>
                                 <color key="backgroundColor" red="0.30833308539999998" green="0.78726117230000003" blue="0.77254485839999998" alpha="0.60211267609999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="3A6-p6-147"/>
@@ -638,7 +633,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhy-FQ-UV3">
-                                <rect key="frame" x="57" y="73" width="300" height="605"/>
+                                <rect key="frame" x="57" y="314" width="300" height="364"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="364" id="Srb-AN-Qin">
@@ -646,7 +641,7 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="300" id="sBh-MZ-ILS"/>
                                 </constraints>
-                                <mutableString key="text">You will be alerted when there is a suspected opioid overdose in your area! You are a good samaritan! This does not give you the right to break the law.You are not legally required to respond, nor are you legally eligible to break any laws by doing so (including but not limited to: breaking the speed limit while responding, using red lights and/or a siren, etc.) Do not respond if you do not have nasal naloxone on your person! After all, that's why you're here! Please do not record, talk about, or in any way communicate the subject matter of what you may witness by using this application. These are people's lives, and they have the right to privacy. Finally, you understand that by using this application, Reprieve is not held responsible for any injuries or illnesses contracted through its use, and each person is acting of his or her own accord.</mutableString>
+                                <string key="text">You will be alerted when there is a suspected opioid overdose in your area! You are a good samaritan! This does not give you the right to break the law.You are not legally required to respond, nor are you legally eligible to break any laws by doing so (including but not limited to: breaking the speed limit while responding, using red lights and/or a siren, etc.) Do not respond if you do not have nasal naloxone on your person! After all, that's why you're here! Please do not record, talk about, or in any way communicate the subject matter of what you may witness by using this application. These are people's lives, and they have the right to privacy. Finally, you understand that by using this application, Reprieve is not held responsible for any injuries or illnesses contracted through its use, and each person is acting of his or her own accord.</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

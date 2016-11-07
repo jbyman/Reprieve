@@ -54,7 +54,6 @@ class DoesResponderHaveNaloxone: UIViewController {
 
         let res = HTTP.httpRequest(requestType: "new_provider", parameters: ["first_name":firstName as Any, "last_name":lastName as Any, "phone_number":phoneNumber as Any, "provider_lat" : HTTP.latitude as Any, "provider_long": HTTP.longitude as Any, "device_token": formattedToken as Any])
         if res{
-            print("Response went through")
             defaults.set(true, forKey: "IS_USER_REGISTERED")
             defaults.set(firstName, forKey: "USER_FIRST_NAME")
             defaults.set(lastName, forKey: "USER_LAST_NAME")
@@ -62,7 +61,6 @@ class DoesResponderHaveNaloxone: UIViewController {
         }
         else{
             defaults.set(false, forKey: "IS_USER_REGISTERED")
-            print("Failure")
             return
         }
         

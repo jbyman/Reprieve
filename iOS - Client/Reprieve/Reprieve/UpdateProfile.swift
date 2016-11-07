@@ -48,8 +48,7 @@ class UpdateProfile: UIViewController {
         let defaults = UserDefaults.standard
         let provider_id = String(defaults.integer(forKey: "USER_DEVICE_TOKEN"))
         
-        let response = HTTP.httpRequest(requestType: "update_provider_information", parameters: ["first_name":firstName.text! as Any, "last_name":lastName.text! as Any, "phone_number":phoneNumber.text! as Any, "provider_id" : provider_id])
-        print(response)
+        let _ = HTTP.httpRequest(requestType: "update_provider_information", parameters: ["first_name":firstName.text! as Any, "last_name":lastName.text! as Any, "phone_number":phoneNumber.text! as Any, "provider_id" : provider_id])
         
         defaults.set(firstName.text, forKey: "USER_FIRST_NAME")
         defaults.set(lastName.text, forKey: "USER_LAST_NAME")
@@ -60,7 +59,6 @@ class UpdateProfile: UIViewController {
     }
     
     @IBAction func unregister(){
-        print("Unregistering")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "unregistered") as! Unregistered
         print(HTTP.device_token)
         
@@ -70,8 +68,6 @@ class UpdateProfile: UIViewController {
         formattedToken = formattedToken.replacingOccurrences(of: ">", with: "")
         
         let _ = HTTP.httpRequest(requestType: "unregister", parameters: ["device_token" : formattedToken])
-        
-        print("Presenting view control")
         self.present(vc, animated: true, completion: nil)
     }
     

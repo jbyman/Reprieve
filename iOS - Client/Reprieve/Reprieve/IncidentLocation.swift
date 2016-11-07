@@ -56,10 +56,6 @@ class IncidentLocation: UIViewController {
     
     
     @IBAction func acceptDispatch(_ sender: AnyObject) {
-        
-        print("what up")
-        print(HTTP.device_token)
-        
         let token = HTTP.device_token
         var formattedToken = token.replacingOccurrences(of: " ", with: "")
         formattedToken = formattedToken.replacingOccurrences(of: "<", with: "")
@@ -71,9 +67,7 @@ class IncidentLocation: UIViewController {
     }
     
     func displayInMaps(){
-        print("hello how are you")
         let url = NSURL(string:"http://maps.apple.com/?saddr=\(IncidentLocation.myLat!),\(IncidentLocation.myLong!)&daddr=\(latitude),\(longitude)")!
-        print(url)
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
 

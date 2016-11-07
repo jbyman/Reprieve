@@ -23,8 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GMSServices.provideAPIKey("AIzaSyBbw40PoF9nQWbZU2sZNPbAdpaOTFs-Pio")
         self.window?.makeKeyAndVisible()
         
-        // Overridden when push notifications accepted
-        HTTP.device_token = "DEVICE_TOKEN_NOT_FOUND"
+        // Set device token ID
+        let token = UIDevice.current.identifierForVendor!.uuidString
+        let formattedToken = token.replacingOccurrences(of: "-", with: "")
+        HTTP.device_token = formattedToken
         
         // As soon as user opens, request to register for remote notifactions
         registerForRemoteNotification()
@@ -54,8 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
         let token = String(format: "%@", deviceToken as CVarArg)
         let formattedToken = token.replacingOccurrences(of: " ", with: "")
-        print(formattedToken)
-        HTTP.device_token = token
+        HTTP.device_token = formattedToken
     }
     
     func registerForRemoteNotification() {
@@ -101,9 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     // Get remote notification data....
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]){
-        print("Notification received")
-        
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]){        
         if let aps = userInfo["details"] as? NSDictionary {
             let latitude = (aps["latitude"] as! NSString).doubleValue
             let longitude = (aps["longitude"] as! NSString).doubleValue

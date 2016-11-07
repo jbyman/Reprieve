@@ -17,19 +17,13 @@ class HTTP{
     static func httpRequest(requestType : NSString, parameters : NSDictionary) -> Bool {
     
         var urlString = "http://104.131.100.28:8000?request_name=" + (requestType as String)
-//        var urlString = "http://localhost:8000?request_name=" + (requestType as String)
         for (k,v) in parameters{
             urlString += "&" + ((k as! NSString) as String)
             urlString += "=" + ((v as! NSString) as String)
         }
         
-        print("now here")
-        print(urlString)
-        
         var request = URLRequest(url: URL(string:urlString)!)
         request.httpMethod = "GET"
-        
-        print("over here")
         
         var err = false
         
@@ -37,8 +31,6 @@ class HTTP{
             data, response, error in
             
             if error != nil{
-                print("Error!")
-                print(error!);
                 err = true
                 return
             }
@@ -47,7 +39,6 @@ class HTTP{
            print(responseString!)
         }
         
-        print("wee")
         task.resume()
         
         if err{

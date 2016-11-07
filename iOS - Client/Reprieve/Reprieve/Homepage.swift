@@ -37,10 +37,6 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
             locationManager.pausesLocationUpdatesAutomatically = false
             locationManager.distanceFilter = 3
             locationManager.startUpdatingLocation()
-            print(locationManager)
-        }
-        else{
-            print("nope")
         }
         
         let defaults = UserDefaults.standard
@@ -70,7 +66,6 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-        print("Location changed")
         let locValue: CLLocationCoordinate2D = locationManager.location!.coordinate
         
         let latitude = String(locValue.latitude)
@@ -87,20 +82,12 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
         let is_registered = defaults.bool(forKey: "IS_USER_REGISTERED")
         
         if (is_registered){
-            let ret = HTTP.httpRequest(requestType: "update_responder_location", parameters: ["provider_lat":latitude, "provider_long":longitude])
-            if ret{
-                print("Updated location")
-            }
-            else{
-                print("Error updating location")
-            }
+            _ = HTTP.httpRequest(requestType: "update_responder_location", parameters: ["provider_lat":latitude, "provider_long":longitude])
         }
         
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
-        print("FAILURE")
-        print(error)
         locationManager.stopUpdatingLocation()
     }
 
