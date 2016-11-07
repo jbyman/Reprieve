@@ -1,2 +1,2 @@
-# Naloxone-Competition-Backend
-The server for the Naloxone delivery app
+# Naloxone Competition Backend
+The REST API for the naloxone delivery application, written in Go

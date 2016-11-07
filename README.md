@@ -26,8 +26,5 @@ These would be the iPad apps that are managed by county emergency dispatch cente
 ## Backend
 This is the REST API, written in Go, used to handle requests from both the Reprieve client app, as well as the dispatcher app, and acts as the intermediary and business logic between the two apps.
 
-## Notes
--Because the REST API functions based off of device ID, running the Xcode simulator (which does not have a registered device ID) will not be able to simulate the location functionality of the iOS application.
-
 ## Questions? Comments?
 Feel free to shoot an email to jsb396@cornell.edu
