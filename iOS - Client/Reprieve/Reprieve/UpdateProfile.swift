@@ -30,6 +30,9 @@ class UpdateProfile: UIViewController {
         firstName.text = defaults.string(forKey: "USER_FIRST_NAME")
         lastName.text = defaults.string(forKey: "USER_LAST_NAME")
         phoneNumber.text = defaults.string(forKey: "USER_PHONE_NUMBER")
+        
+        firstName.autocapitalizationType = .words
+        lastName.autocapitalizationType = .words
     }
 
     override func didReceiveMemoryWarning() {

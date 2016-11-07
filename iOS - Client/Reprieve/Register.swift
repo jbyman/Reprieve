@@ -24,6 +24,9 @@ class Register: UIViewController {
         backBtn.layer.cornerRadius = 5
         nextBtn.layer.cornerRadius = 5
         
+        firstName.autocapitalizationType = .words
+        lastName.autocapitalizationType = .words
+        
         // Do any additional setup after loading the view.
     }
 
