@@ -39,22 +39,11 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
             locationManager.distanceFilter = 3
             locationManager.startUpdatingLocation()
         }
-
-        let lat = 42.439631
-        let long = -76.485176
-        
-        self.latitude = lat
-        self.longitude = long
         
         let camera = GMSCameraPosition.camera(withLatitude: self.latitude, longitude: self.longitude, zoom: 18.0)
         
         mapView.camera = camera
         mapView.isMyLocationEnabled = true
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
-        marker.map = mapView
         
         var request = URLRequest(url: URL(string: HTTP.SERVER_URI + "retrieve_incidents&dispatcher_id=1")!)
         request.httpMethod = "GET"
@@ -101,11 +90,9 @@ class ManageCalls: UIViewController, CLLocationManagerDelegate {
         
         if(!specificIncident){
             let locValue: CLLocationCoordinate2D = locationManager.location!.coordinate
-        
-            let lat = 42.439631
-            let long = -76.485176
-//            let lat = locValue.latitude
-//            let long = locValue.longitude
+    
+            let lat = locValue.latitude
+            let long = locValue.longitude
             self.latitude = lat
             self.longitude = long
             
