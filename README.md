@@ -4,7 +4,7 @@ Our entry for the _2016 FDA Naloxone App Competition_. This repository includes 
 <img src="UI/logo.png" alt="Logo" height="250px"/>
 
 ## Members
-* Jonathan Byman
+* Jake Byman
 * Kevin Guo
 * Michael Wagner
 
